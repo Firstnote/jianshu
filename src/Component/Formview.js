@@ -1,40 +1,45 @@
 import React from "react";
+import Signin from "./Signin";
+import Signup from "./Signup";
 import {
   Tabs,
   TabList,
-  Tab,
+  // Tab,
   TabPanel,
   TabPanels,
   Box,
   Flex,
+  Text,
   // Image,
   // useColorModeValue,
 } from "@chakra-ui/react";
 
-function Formview(params) {
+import { Tab } from "./Custom";
+
+function Formview(props) {
   return (
     <Box
       bgColor="white"
       p="50px"
-      w="300px"
       boxShadow="lg"
       borderRadius="lg"
       mx="auto"
       my="20px"
     >
-      <Tabs>
+      <Tabs color="#969696" fontSize="18px">
         <TabList borderBottomColor="transparent">
-          <Flex justifyContent="center" w="100%">
-            <Tab _focus={{ boxShadow: "none" }}>One</Tab>
-            <Tab _focus={{ boxShadow: "none" }}>Two</Tab>
+          <Flex justifyContent="center" alignItems="center" w="100%">
+            <Tab>登录</Tab>
+            <Text p="10px">·</Text>
+            <Tab>注册</Tab>
           </Flex>
         </TabList>
         <TabPanels>
           <TabPanel>
-            <p>one!</p>
+            <Signin />
           </TabPanel>
           <TabPanel>
-            <p>two!</p>
+            <Signup />
           </TabPanel>
         </TabPanels>
       </Tabs>

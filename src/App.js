@@ -4,7 +4,9 @@ import "./index.css";
 function App() {
   return (
     <ChakraProvider>
-      <Formview></Formview>
+      <div className="App">
+        <Formview></Formview>
+      </div>
     </ChakraProvider>
   );
 }
